@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&family=Poppins:wght@500;700&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <title>application form</title>
+  </head>
+  <body>
+    <header>
+      <section>
+        <div class="container mt-5 pt-2">
+          <div class="d-flex justify-content-between">
+            <h5>Application ID: <span class="fw-bold">BSTF-201906624</span></h5>
+            <img
+              class="img-fluid img-size"
+              src="data:image/jpeg;base64,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"
+              alt=""
+            />
+          </div>
+        </div>
+        <h4 class="text-center fw-bold pt-4">Application Form</h4>
+        <p class="text-center fw-bolder mt-2 pt-4">
+          Reimbursement of Expenses against one way airbtravel from the
+          Bangladesh Trust Fund
+        </p>
+        <p class="text-center">
+          <small>(Academic Session: January - December 2019)</small>
+        </p>
+      </section>
+    </header>
+
+    <section class="sec2-bg mt-5">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Name</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">Md. Firoz Ahmed</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Gender</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">Male</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Guardian Name</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">Md Azizul Haque</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Guardian income</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">200000.00</p>
+          </div>
+        </div>
+        <div class="bg-dark">
+          <p class="text-white fw-bold">
+            Address of the Application in Bangladesh
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Present Address</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">101 CREEKMORE DR APT 5214</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Present Phone</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">6623801713</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Parmanent Address</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">Telipara, Nandanpur,Puthia,Rajshahi</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Contact Number(In Bangladesh)</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">01755163340</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Email</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">firozahmed5387@gmail.com</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>NID</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">19918118240000451</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Passport Number</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">EF0816835</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Passport Expire Date</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">14/03/2025</p>
+          </div>
+        </div>
+        <div class="bg-dark">
+          <p class="text-white fw-bold">
+            Bank Account Information (In Bangladesh)
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Account Name</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">Md Shariful Islam</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Relationship with Applicant</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">Brother/Sister</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Account Number</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">4117640414300</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Bank name</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">AB Bank Ltd.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Branch Name</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">Tajpur, Sylhet</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Bank Routing Number</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">020913827</p>
+          </div>
+        </div>
+        <div class="bg-dark">
+          <p class="text-white fw-bold">
+            University Information(where the applicant has been enrolled)
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Country</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">United States</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>University Name</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">University of Mississippi</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Institutions's contact person's details</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">
+              Dr. Brenda Prager Assistant Professor <br />
+              The University of Mississippi Department of Chemical Engineering
+              <br />
+              140 Abderson Hall University, Ms, 38677-1848
+              <br />
+              U.S.A O:+1-662-915-2184
+              <br />
+              bhprager@olemiss.edu|
+              <br />
+              www.olemiss.edu
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Field of Study including Major</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">
+              PhD. in Engineering Science with an emphasis in Chemical
+              Engineering
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Admission Certificate</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4 fw-bold">Attached</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Scholarship/Followship Certificate</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4 fw-bold">Attached</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Certificate of No Travel Grant Received</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4 fw-bold">Attached</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>I-20</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4 fw-bold">Attached</p>
+          </div>
+        </div>
+        <div class="bg-dark">
+          <p class="text-white fw-bold">
+            Cost of one-way ticket (in US and BD Taka)
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Ticket Number</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">1572788080968</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Ticket Date</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">28/12/2018</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Destination Airport</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">Memphis International Airport. TN</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Ticket Fare including TAX(in US$)</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">$ 1,091.00 = $1,109.00</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Ticket Fare without TAX(in US$)</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">$ 1,091.00</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Ticket Fare including TAX(in BDT)</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">BDT 91,000.00+BDT 15,00.00 = BDT 92,500.00</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Ticket Fare without TAX(in BDT)</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4">BDT 91,000.00</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-5">
+            <div class="d-flex justify-content-between">
+              <p>Ticket Document</p>
+              <p>:</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-7">
+            <p class="ps-4 fw-bold">Attached</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
